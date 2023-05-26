@@ -74,7 +74,7 @@ const Login = () => {
     const user = await fetch("http://localhost:3001/users?email=" + emailState.value)
       .then((response) => response.json())
       .then((data) => {
-        // console.log(data[0].id);
+         console.log(data);
         if(data[0].password === passwordState.value){
         authCtx.onLogin(data[0].id);
         }
